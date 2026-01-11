@@ -26,7 +26,7 @@ class TradingStrategy:
         self.initialize_data_structures()
 
     def load_pricing_data(self):
-        self.prices = pd.read_csv("/content/Prices.csv", index_col='Date', parse_dates=True)
+        self.prices = pd.read_csv("Prices.csv", index_col='Date', parse_dates=True)
         self.returns = self.prices.pct_change().dropna()
 
     def initialize_data_structures(self):
